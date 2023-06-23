@@ -1,9 +1,12 @@
+import HeroSection from "../../Components/HomeCompo/HeroSection";
+import TenantsSection from "../../Components/HomeCompo/TenantsSection";
 
 
 const Home = () => {
     return (
         <div>
-           <h2> Hello Rich people</h2>
+           <HeroSection/>
+           <TenantsSection/>
         </div>
     );
 };
