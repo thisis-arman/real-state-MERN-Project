@@ -5,7 +5,7 @@ const Header = () => {
     const menuOptions =(
         <>
        
-        <li><Link>Rent</Link></li>
+        <li><Link to='/rent'>Rent</Link></li>
         <li><Link>Buy</Link></li>
         <li><Link>Sell</Link></li>
         <li><Link>Manage Properties </Link></li>

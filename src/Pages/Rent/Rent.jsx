@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
-import { MdOutlineBed } from "react-icons/md";
 import { BiBath } from "react-icons/bi";
-import {HiOutlineArrowPathRoundedSquare  } from "react-icons/hi2";
+import { HiOutlineArrowPathRoundedSquare } from "react-icons/hi2";
+import { MdOutlineBed } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 
-const Houses = () => {
-
+const Rent = () => {
     const [houses ,setHouses]=useState([])
 
     useEffect(()=>{
@@ -17,10 +16,11 @@ const Houses = () => {
     },[])
 
     return (
-        <section className="3xl:px-32 xl:px-24 px-4 my-12">
-            <div className="md:flex justify-between py-8">
+        <div className="bg-[#F7F7FD]">
+          <section className="3xl:px-32 xl:px-24 px-4 py-12 ">
+            <div className="md:flex justify-between py-8 ">
                 <div>
-                <h2 className="text-4xl font-bold">Based on your location</h2>
+                <h2 className="text-4xl font-bold">Search properties for rent</h2>
                 <p className="py-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </div>
                 <button className="btn btn-primary">Browse Properties</button>
@@ -28,7 +28,7 @@ const Houses = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
             {
-                houses.slice(0,6).map((house,i)=>
+                houses.map((house,i)=>
                 <Link to='' key={i} className="card rounded-md md:w-96 bg-base-100 shadow-sm hover:shadow-xl">
   <figure><img src={house.image} alt="Shoes" /></figure>
   <div className="card-body">
@@ -57,8 +57,10 @@ const Houses = () => {
             }
         </div>
             
-        </section>
+        </section>    
+        </div>
+
     );
 };
 
-export default Houses;
+export default Rent;
