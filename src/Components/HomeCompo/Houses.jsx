@@ -3,6 +3,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { MdOutlineBed } from "react-icons/md";
 import { BiBath } from "react-icons/bi";
 import {HiOutlineArrowPathRoundedSquare  } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 
 const Houses = () => {
@@ -28,12 +29,14 @@ const Houses = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
             {
                 houses.map((house,i)=>
-                <div key={i} className="card rounded-md md:w-96 bg-base-100 shadow-xl">
+                <Link to='' key={i} className="card rounded-md md:w-96 bg-base-100 shadow-sm hover:shadow-xl">
   <figure><img src={house.image} alt="Shoes" /></figure>
   <div className="card-body">
    <div className="flex justify-between ">
-   <h2 className="card-title">$<span className="text-blue-500 font-bold">{house.price}</span>/monthly</h2>
-   <AiOutlineHeart className='w-10 h-10'/>
+   <h2 className="card-title"><span className="text-blue-500 font-bold">${house.price}</span>/monthly</h2>
+   <span className="border-2 rounded-full p-2">
+   <AiOutlineHeart className='w-8 h-8'/>
+   </span>
    </div>
     <h2 className="card-title">{house.house_name}</h2>
     <p>{house.address}</p>
@@ -48,7 +51,7 @@ const Houses = () => {
       {/* <button className="btn btn-primary">Buy Now</button> */}
     </div>
   </div>
-</div>
+</Link>
                 
                 )
             }
